@@ -18,7 +18,7 @@ public class CartControllerDB extends Application implements ICartController {
   List<Product> shoppingCart = new ArrayList<>();
 
   public CartControllerDB(Context context) {
-    appDatabase = Room.databaseBuilder(context, AppDatabase.class, "product").allowMainThreadQueries().build();
+    appDatabase = Room.databaseBuilder(context, AppDatabase.class, "appdb").allowMainThreadQueries().build();
     productDao = appDatabase.productDao();
   }
 
